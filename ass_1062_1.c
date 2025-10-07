@@ -1,25 +1,26 @@
 #include <stdio.h>
 
-int main() {
-    int n, i, smallest;
-    
-    printf("Enter the number of elements: ");
+void main()
+{
+    int a[1000], n, i, max;
+
+    printf("\nEnter array size: ");
     scanf("%d", &n);
 
-    int arr[n];   // Declare array after reading n (C99 feature)
-
-    printf("Enter %d elements:\n", n);
-    for (i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
+    for(i = 0; i < n; i++)
+    {
+        printf("\nEnter value of a[%d]: ", i);
+        scanf("%d", &a[i]);
     }
 
-    smallest = arr[0];
-    for (i = 1; i < n; i++) {
-        if (arr[i] < smallest) {
-            smallest = arr[i];
+    max = a[0];
+    for(i = 0; i < n; i++)
+    {
+        if(a[i] > max)
+        {
+            max = a[i];
         }
     }
 
-    printf("The smallest element is: %d\n", smallest);
-return 0;
-}
+    printf("\nBiggest number is: %d", max);
+   }
